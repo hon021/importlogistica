@@ -1,0 +1,40 @@
+<div>
+     <legend>{$Label_Tittle}</legend>
+     <div class="parteForm" id="formContainer">
+			<div id="ContainerMercancia">
+			
+			<div class="input-control text size3" data-role="input-control">
+		        <input type="text" id="txtNroContenedor" placeholder="Nro. Contenedor" maxlength="50">
+		        <button class="btn-clear" tabindex="-1"></button>
+		    </div>
+		    <div class="input-control text size3" data-role="input-control">
+		        <input type="text" id="txtNroInterno" placeholder="Nro. Interno" maxlength="50">
+		        <button class="btn-clear" tabindex="-1"></button>
+		    </div>
+		    <div class="input-control text size3" data-role="input-control">
+		        <input type="text" id="txtDescripcion" placeholder="Descripcion" maxlength="50">
+		        <button class="btn-clear" tabindex="-1"></button>
+		    </div>
+		</div>
+		<br>		 
+
+	    <button class="button" id="btnNewContainer"  type="button">Nuevo!</button>
+	    <button class="button" id="btnSaveContainer" type="button">Registrar!</button>
+	    {if $IdRol != 3}  
+		    <button class="button" id="btnUpdateContainer"  type="button">Actualizar!</button>
+		    <button class="button" id="btnDeleteContainer"  type="button">Inactivar!</button> 
+	    {/if}	 
+    </div>
+    
+    <div class="parteListCont" >
+	    <div  id="Buscar-Contenedor" class="input-control text" >
+	            <input type="text" id="txtBuscarContenedor" placeholder="Buscar">
+	            <button class="btn-clear" id="btnClearCont" tabindex="-1"></button>
+	    </div>
+	    <div class="parteList listview" id="Lista-container">
+   	</div> 
+    </div>
+
+     <!--<input id="btnScripts" name="Scripts" type="button" value={$sbDato} />-->
+</div>
+ 

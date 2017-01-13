@@ -1,0 +1,184 @@
+/*--- Login ---*/
+ 
+.wrapper
+{
+	/*420px;*/
+	/*width: 50%;*/
+	max-width: 420px;
+	min-width: 286px;
+
+	vertical-align: center;
+	margin-top: 5em;
+	margin-right: 20%;
+	margin-left: 20%;
+
+
+}
+ /*
+}
+.wrapper{
+	margin: 70px auto;
+	width:300px;
+	height: 250px;
+}*/
+.login-form{
+	/*width: 100%;
+	height: 100%;*/
+	overflow: auto;
+	background: #3399cc;
+	padding-left: 10%;
+}
+
+input{
+	font-family:"raleway",bold;
+	padding: 8px 0px 8px 30px;
+	width: 214px;
+	border: 0px;
+	outline: none;
+	display: block;
+	margin-left: 26px;
+	margin-bottom: 15px;
+}
+input.username{background:#fff url(../images/user.png) -6px -5px  no-repeat;}
+input.password{background:#fff url(../images/pass.png) -6px -5px no-repeat;}
+input[type="submit"]{
+	padding: 8px 0px;
+	width: 110px;
+	/*background: #035a85;*/
+	border: 0px;
+	outline: none;
+	display: block;
+	color: #fff;
+	margin-right: 30px;
+	margin-bottom: 15px;
+	float: right;
+	text-align: left;
+	padding-left: 25px;
+	cursor: pointer;
+}
+ 
+/*--- Fin Login ---*/
+div.parteForm{
+	
+	float: left;
+	width: 60%;
+	margin-left: 2%;
+}
+
+div.parteList{
+	float: right;
+	width: 37%;
+	height: 450px;
+	overflow-y: scroll;
+	padding: 0px 0px 1em 1em;
+}
+div.parteListEmp{
+	float: right;
+	width: 37%;
+	height: 450px;
+	overflow-y: none;
+	padding: 0px 0px 1em 1em;
+}
+div.parteListClientes
+{
+	float: right;
+	width: 37%;
+	height: 450px;
+	overflow-y: none;
+	padding: 0px 0px 1em 1em;
+}
+div.parteListCont
+{
+	float: right;
+	width: 37%;
+	height: 450px;
+	overflow-y: none;
+	padding: 0px 0px 1em 1em;
+}
+div.parteListMerc
+{
+	float: right;
+	width: 37%;
+	height: 450px;
+	overflow-y: none;
+	padding: 0px 0px 1em 1em;
+}
+
+/*--- Form Register ---*/
+
+#ContainerMercancia
+{
+	display: table-caption;	
+}
+
+.register-form{
+	
+	background:#f1f1f1; 
+	width:50%; 
+	/*margin: 0 0 0 5px;*/
+	padding: 1em 3em 1em 1em;
+	margin-left: 30%;
+}
+ 
+/*#Columna-Empleados, #Formulario-Empleados*/
+#Lista-Empleados, #Formulario-Empleados
+{
+	/*display: inline-block;*/
+	vertical-align: top;
+	margin: 1em;
+	width: 100%;
+}
+#Buscar-Contenedor , #Lista-container
+{
+	vertical-align: top;
+	margin: 0 1em 0 0;
+	width: 80%;
+}
+#Buscar-Mercancia , #Lista-mercancia
+{
+	vertical-align: top;
+	margin: 0 1em 0 0;
+	width: 80%;
+}
+
+#Lista-clientes
+{
+
+	vertical-align: top;
+	margin: 1em;
+	width: 100%;
+}
+#txtPassword_Cliente
+{
+	width: 70%;
+}
+
+#Buscar-Clientes
+{
+	display: inline-block;
+	width: 80%;
+	margin-left: 1em;
+}
+#Buscar-Empleados
+{
+	display: inline-block;
+	width: 80%;
+	margin-left: 1em;
+}
+ 
+.StartMenu
+{
+	background: url("../images/mapa.jpg")  ;
+	background-size: 100% 100%;
+	height: 668px;
+	background-size: 100% 100%;
+	background-repeat:no-repeat;
+	vertical-align: top;
+	margin: -10px 0 0 0;
+}
+.StartMenu H1
+{
+	color: white;
+	margin:10px;
+
+} 

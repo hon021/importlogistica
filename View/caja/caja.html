@@ -1,0 +1,50 @@
+<div>
+	<legend>{$Titulo}</legend>
+
+	<div class="parteForm" id="formCaja">
+
+		<div class="input-control select">
+			<select id = "cmbMercancia"  onchange="OnLoseFocus(this.value)">
+					{foreach key = dataid item = data from =$array_NombreMercancia}
+					{if $dataid == 0}    
+						<option value="0" selected="selected">No Comprobante Mercancia</option>	
+					{else}
+						<option value="{$arrayIdMercancia[$dataid]}">{$data}</option>
+					{/if}
+				{/foreach}
+			</select>
+		</div>
+		
+		<div class="input-control select">
+			<select id = "cmbEstadoCaja">
+				{foreach key = dataid item = data from =$arrayDescripcionEstadoCaja}
+					{if $dataid == 0}    
+						<option value="0" selected="selected">Seleccione el Estado Caja</option>	
+					{else}
+						<option value="{$arrayIdEstadoCaja[$dataid]}">{$data}</option>
+					{/if}
+				{/foreach}
+			</select>
+		</div>
+		
+		
+		<div class="input-control text size3" data-role="input-control">
+	        <input type="text" id="txtCodigoBarra" placeholder="Codigo de Barras">
+	        <button class="btn-clear" tabindex="-1"></button>
+	    </div>	
+	    
+        <br>
+         
+	    <button class="button" id="btnNewCaja"  type="button">Nuevo!</button>
+	    <button class="button" id="btnSaveCaja" type="button">Registrar!</button>
+	    <button class="button" id="btnUpdCaja"  type="button">Actualizar!</button>
+	    <button class="button" id="btnDelCaja"  type="button">Inactivar!</button> 	 
+    </div>
+    
+     <!-- Parte Lista Mercancia-->
+    <div class="parteList listview" id="Lista-caja">
+   
+    </div>
+    
+</div>
+

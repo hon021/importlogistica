@@ -1,0 +1,60 @@
+<div>
+	<legend>{$Titulo}</legend>
+
+	<div class="parteForm" id="formEnvio">
+
+        
+		<div class="input-control select">
+			<select id = "cmbMercancia_Envio">
+					{foreach key = dataid item = data from =$array_NombreMercancia}
+					{if $dataid == 0}    
+						<option value="0" selected="selected">No Comprobante Mercancia</option>	
+					{else}
+						<option value="{$arrayIdMercancia[$dataid]}">{$data}</option>
+					{/if}
+				{/foreach}
+			</select>
+		</div>
+		 
+		
+		<div class="input-control select">
+			<select id = "cmbContenedor_Envio">
+			    <option value="0">Nro Contenedor</option>
+				{foreach key = dataid item = data from =$array_DescripcionCont}
+					<option value="{$array_IdCont[$dataid]}">{$data}</option>	
+				{/foreach}
+			</select>
+		</div>
+		
+		
+		
+		<p>Fecha Envio (Año-Mes-Día)</p>
+		<div class="input-control text size2" id="calendarFechaEnvio">
+			<input type="text" id="dateEnvio">
+			<button class="btn-date" type="button"></button>
+		</div>
+		
+		<br>
+		
+		<div class="input-control text size3" data-role="input-control">
+	        <input type="text" id="txtNro_Cajas_Envios" placeholder="Nro Cajas">
+	        <button class="btn-clear" tabindex="-1"></button>
+	    </div>	
+	    
+        <br>
+         
+	    <button class="button" id="btnNewEnvio"  type="button">Nuevo!</button>
+	    <button class="button" id="btnSaveEnvio" type="button">Registrar!</button>
+	    {if $IdRol != 3}
+		    <button class="button" id="btnUpdEnvio"  type="button">Actualizar!</button>
+		    <button class="button" id="btnDelEnvio"  type="button">Inactivar!</button> 	
+	    {/if} 
+    </div>
+    
+     <!-- Parte Lista Envio-->
+    <div class="parteList listview" id="Lista-envio">
+   
+    </div>
+    
+</div>
+

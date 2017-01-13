@@ -1,0 +1,97 @@
+<div class="navigation-bar dark">
+    <div class="navigation-bar-content container">
+        <a href="/Exportc" class="element"><span class="icon-home"></span> Cerrar sesi&oacuten </a>
+        <span class="element-divider"></span>
+
+        <a class="element1 pull-menu" href="#"></a>
+        <ul class="element-menu">
+            
+            {foreach key = dataid item = data from =$array_NombreModulo}
+   
+               {if $array_CodigoPermiso[$dataid] == "01"}
+		            <li>
+			          <a href="#" id="idModulo_Clientes">{$data}</a>
+		            </li>
+		       {/if}  
+		       
+		       {if $array_CodigoPermiso[$dataid] == "02"}  
+		            <li>
+		              <a href="#" id="idEmpleados">{$data}</a>
+		            </li>
+		       {/if} 
+		         
+		       {if $array_CodigoPermiso[$dataid] == "03"}    
+		            <li>
+		              <a href="#" id="idContenedor">{$data}</a>
+		            </li>
+		       {/if}
+		        
+		       {if $array_CodigoPermiso[$dataid] == "04"}  
+		            <li>
+			              <a class="dropdown-toggle" href="#" id="idGestionMercancia">{$data}</a>
+			              <ul class="dropdown-menu dark" data-role="dropdown">
+			                     <li><a href="#" id="idEnvios">Envios</a></li>
+				                 <li><a href="#" id="idMercancia">Mercancia</a></li>
+				                 <!--<li><a href="#" id="idCajas">Cajas</a></li>-->
+				                 <li><a href="#" id="idObservacion">Observaciones</a></li>
+				                 <!--<li><a href="#" id="idEstadoCaja">EstadoCaja</a></li>-->
+				                 <!--<li><a href="#" id="idLocalizacion">Localizacion</a></li>-->
+				          </ul> 
+		            </li>
+		       {/if}
+		       
+		       
+		        {if $array_CodigoPermiso[$dataid] == "10"}
+		            <li>
+		                 <a class="dropdown-toggle" href="#" id="idReportes">{$data}</a>
+			             <ul class="dropdown-menu dark" data-role="dropdown">
+			                 <li><a href="#" id="idReporte1">Estado Caja</a></li>
+			                 <li><a href="#" id="idReporte2">Estado Mercancia</a></li>
+			                 <li><a href="#" id="idReporte3">Mercancia x DNI</a></li>
+			                 <li><a href="#" id="idReporte4">Contenedor x DNI</a></li>
+			                 {if $IdRol == 1} 
+			                 	<li><a href="#" id="idReporte5">Reporte Contenedor</a></li>
+			                 {/if} 	 
+			             </ul> 
+		            </li>
+		           
+		       {/if}  
+		       
+		       {if $array_CodigoPermiso[$dataid] == "09"} 
+		            <li>
+		                 <a class="dropdown-toggle" href="#" id="idAdmin">{$data}</a>
+			             <ul class="dropdown-menu dark" data-role="dropdown">
+			                 <li><a href="#" id="idModuloRoles">Roles</a></li>
+			                 <li><a href="#" id="idModulos">Modulos</a></li>
+			             </ul> 
+		            </li>
+		       {/if}  
+		        
+            {/foreach}
+            
+         </ul>
+         
+         
+                    <div class="no-tablet-portrait">
+
+                        <div class="element place-right">
+                            <a class="dropdown-toggle" href="#">
+                                <span class="icon-cog"></span>
+                            </a>
+                            <ul class="dropdown-menu place-right" data-role="dropdown">
+                                <li><a href="#" id="IdDialogCambioClave">Cambio Clave</a></li>
+                                <li><a href="#" id="IdDialogSoporte">Soporte</a></li>
+                               
+                            </ul>
+                        </div>
+                        <span class="element-divider place-right"></span>
+                        <button class="element image-button image-left place-right">
+                            <b>{$sbLogin}</b> 
+                            <img src="View/images/user2.jpg"/>                                              
+                        </button>
+                    </div>
+        
+
+       
+    </div>
+</div>

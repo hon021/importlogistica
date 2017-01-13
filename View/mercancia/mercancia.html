@@ -1,0 +1,65 @@
+<div>
+	<legend>{$Label_Tittle}</legend>
+
+	<div class="parteForm" id="formMercancia">
+
+		
+			<div class="input-control select">
+				<select id = "cmbCliente">
+					{foreach key = dataid item = data from =$array_NombreCliente}
+						{if $dataid == 0}    
+							<option value="0">Seleccione el Cliente</option>
+						{else}
+							<option value="{$array_IdCost[$dataid]}">{$data}</option>
+						{/if}
+					{/foreach}
+				</select>
+			</div>
+			<div id="ContainerMercancia">
+			
+			<div class="input-control text size3" data-role="input-control">
+		        <input type="text" id="txtComprobante" placeholder="Nro. Comprobante" maxlength="20">
+		        <button class="btn-clear" tabindex="-1"></button>
+		    </div>
+		    <div class="input-control text size3" data-role="input-control">
+		        <input type="text" id="txtTotalCajas" placeholder="Nro. Total Cajas" maxlength="11">
+		        <button class="btn-clear" tabindex="-1"></button>
+		    </div>
+		    <div class="input-control text size3" data-role="input-control">
+		        <input type="text" id="txtCubicaje" placeholder="Cubicaje" maxlength="10">
+		        <button class="btn-clear" tabindex="-1"></button>
+		    </div>
+		    <div class="input-control text size3" data-role="input-control">
+		        <input type="text" id="txtNotasMercancia" placeholder="Observaciones" maxlength="254">
+		        <button class="btn-clear" tabindex="-1"></button>
+		    </div>
+		    
+		    <p>Fecha Ingreso(Año-Mes-Día)</p>
+			<div class="input-control text size2" id="calendarFechaMercancia">
+				<input type="text" id="dateMercancia">
+				<button class="btn-date" type="button"></button>
+			</div>
+		    
+		</div>
+		<br>		 
+
+	    <button class="button" id="btnNewMercancia"  type="button">Nuevo!</button>
+	    <button class="button" id="btnSaveMercancia" type="button">Registrar!</button>
+	    {if $IdRol != 3} 
+		    <button class="button" id="btnUpdMercancia"  type="button">Actualizar!</button>
+		    <button class="button" id="btnDelMercancia"  type="button">Inactivar!</button>
+	    {/if} 	 
+    </div>
+    
+     <!-- Parte Lista Mercancia-->
+     <div class="parteListMerc" >
+      	<div  id="Buscar-Mercancia" class="input-control text" >
+	            <input type="text" id="txtBuscarMercancia" placeholder="Buscar">
+	            <button class="btn-clear" id="btnClearMerc" tabindex="-1"></button>
+	    </div>
+	    <div class="parteList listview" id="Lista-mercancia">
+    </div>
+    </div>
+    
+</div>
+

@@ -1,0 +1,74 @@
+<div>
+	<legend>{$Titulo}</legend>
+
+	<div class="parteForm" id="formObservacion">
+
+       <!--Selecccion de Mercancia -->
+       <!--  
+       <div class="input-control select">
+			<select id = "cmbObservMercancia">
+				{foreach key = dataid item = data from =$array_NroComprobante}
+					{if $dataid == 0}    
+						<option value="0">Seleccione No Comprobante</option>
+					{else}
+						<option value="{$array_IdMercancia[$dataid]}">{$data}</option>
+					{/if}
+				{/foreach}
+			</select>
+		</div>
+		 -->
+		 
+		<!--Selecccion de Envio --> 
+       <div class="input-control select">
+			<select id = "cmbObservEnvio">
+				{foreach key = dataid item = data from =$array_Descripcion}
+					{if $dataid == 0}    
+						<option value="0">Seleccione Fecha Envio</option>
+					{else}
+						<option value="{$array_IdEnvio[$dataid]}">{$data}</option>
+					{/if}
+				{/foreach}
+			</select>
+		</div>
+		
+		<!--Selecccion de Localizacion -->
+       <div class="input-control select">
+			<select id = "cmbObservLocali">
+				{foreach key = dataid item = data from =$array_NombreLocali}
+					{if $dataid == 0}    
+						<option value="0">Seleccione Localizacion</option>
+					{else}
+						<option value="{$array_IdLocali[$dataid]}">{$data}</option>
+					{/if}
+				{/foreach}
+			</select>
+		</div>
+		
+
+	    <p>Fecha Ingreso (Año-Mes-Día)</p>
+		<div class="input-control text size2" id="calendarFechaObservacion">
+			<input type="text" id="dateObservacion">
+			<button class="btn-date" type="button"></button>
+		</div>
+		
+		<br>
+		
+		<div class="input-control textarea">
+	        <textarea id="txtObservacion" placeholder = "Observaciones"></textarea>
+	    </div>
+		
+	    <button class="button" id="btnNewObservacion"  type="button">Nuevo!</button>
+	    <button class="button" id="btnSaveObservacion" type="button">Registrar!</button>
+	    {if $IdRol != 3}
+		    <button class="button" id="btnUpdObservacion"  type="button">Actualizar!</button>
+		    <button class="button" id="btnDelObservacion"  type="button">Inactivar!</button>
+	    {/if} 	 
+    </div>
+    
+     <!-- Parte Lista Observacion-->
+    <div class="parteList listview" id="Lista-observacion">
+   
+    </div>
+    
+</div>
+

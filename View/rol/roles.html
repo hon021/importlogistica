@@ -1,0 +1,37 @@
+<div>
+
+	<legend>{$Titulo}</legend>
+
+	<div class="parteForm" id="formRoles">
+
+	    <div class="input-control text" data-role="input-control">
+	        <input type="text" id="txtNombre_Rol" placeholder="Nombre Rol">
+	        <button class="btn-clear" tabindex="-1"></button>
+	    </div>
+	   
+        <!--Check Modulos-->
+        <div>
+		    <div class="input-control checkbox" data-role="input-control">
+		        {foreach key = dataid item = data from =$array_NombreModulo}
+		        	{if $dataid > 0} 
+						<label class="inline-block"><input type="checkbox" id = "Module{$array_IdModulo[$dataid]}"  value="{$array_IdModulo[$dataid]}" name = "module"/>
+						<span class="check"></span>
+						{$data}
+						</label>
+			       {/if}
+			    {/foreach}
+			</div>
+		</div>
+	    
+
+	     <button class="button" id="btnNewRol"  type="button">Nuevo!</button>
+	     <button class="button" id="btnSaveRol" type="button">Registrar!</button>
+	     <button class="button" id="btnUpdRol"  type="button">Actualizar!</button>
+	     <button class="button" id="btnDelRol"  type="button">Inactivar!</button> 	 
+    </div>
+
+    <!-- Parte Lista Roles-->
+    <div class="parteList listview" id="Lista-roles">
+   
+    </div>
+ </div>   
